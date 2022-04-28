@@ -1,0 +1,60 @@
+﻿00@page
+@model CENG382.Pages.ListCleanersModel
+@{
+    ViewData["Title"] = "List Cleaners";
+}
+<h1>List</h1>
+<h4>Cleaners</h4>
+<p>
+    <a asp-page="CreateCleaner">Create New Cleaner</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaners[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaners[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaners[0].Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaners[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaners[0].Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaners[0].City)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Cleaners)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+        </tr>
+            }
+
+    </tbody>
+</table>
