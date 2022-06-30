@@ -1,1 +1,1 @@
-belongs to my web development classes
+my project from my web development course
